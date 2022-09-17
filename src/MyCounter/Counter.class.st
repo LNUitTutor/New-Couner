@@ -16,6 +16,11 @@ Class {
 }
 
 { #category : #accessing }
+Counter class >> startAt: initalInteger [
+ ^self new count: initalInteger 
+]
+
+{ #category : #accessing }
 Counter >> count [
   ^ count
 ]
@@ -23,4 +28,14 @@ Counter >> count [
 { #category : #accessing }
 Counter >> count: anInteger [
   count := anInteger 
+]
+
+{ #category : #actions }
+Counter >> decrement [
+	count := count - 1.
+]
+
+{ #category : #actions }
+Counter >> increment [
+	count := count + 1
 ]
